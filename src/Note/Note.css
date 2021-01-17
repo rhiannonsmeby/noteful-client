@@ -1,0 +1,10 @@
+.Note{
+    border: 2px solid black;
+    margin: 10px;
+    padding: 5px;
+}
+
+.note-details{
+    display: flex;
+    justify-content: space-evenly;
+}

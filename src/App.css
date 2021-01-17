@@ -1,0 +1,16 @@
+header {
+  text-align: center;
+}
+
+.noteful {
+  text-align: center;
+  display: flex;
+}
+
+.flex-one {
+  flex: 1;
+}
+
+.flex-three {
+  flex: 3;
+}
