@@ -33,7 +33,7 @@ class AddNote extends React.Component {
                 if (!response.ok) {
                     throw new Error('We could not post this new note')
                 }
-                return response.json()
+                return response.json();
             })
             .then(data => {
                 addNote(data);

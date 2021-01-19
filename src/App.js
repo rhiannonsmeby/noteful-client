@@ -23,7 +23,7 @@ class App extends React.Component {
                 if (!response.ok) {
                     throw new Error('Something went wrong')
                 }
-                return response.json()
+                return response.json();
             })
             .then(data => {
                 this.setState({
@@ -41,7 +41,7 @@ class App extends React.Component {
                 if (!response.ok) {
                     throw new Error('Something went wrong')
                 }
-                return response.json()
+                return response.json();
             })
             .then(data => {
                 this.setState({
@@ -98,7 +98,7 @@ class App extends React.Component {
                         <Route exact path='/'
                             component={FolderList}
                         />
-                        <Route path='/folder/:folderId'
+                        <Route path='/folders/:folderId'
                             component={SelectedFolder}
                         />
                         <Route path='/note/:noteId'
@@ -110,7 +110,7 @@ class App extends React.Component {
                             <Route exact path='/'
                                 component={NoteList}
                             />
-                            <Route path='/folder/:folderId'
+                            <Route path='/folders/:folderId'
                                 component={NoteStorageFolder}
                             />
                             <Route path='/note/:noteId'

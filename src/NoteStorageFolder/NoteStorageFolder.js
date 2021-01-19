@@ -10,9 +10,12 @@ class NoteStorageFolder extends React.Component {
 
     render() {
         const { notes } = this.context;
+        console.log('notes data', notes)
         const filteredNotes = notes.filter(note => {
-            return note.folder_id === this.props.match.params.folderId;
+            console.log(typeof this.props.match.params.folderId, typeof note.folder_id)
+            return note.folder_id === Number(this.props.match.params.folderId)
         })
+        console.log('filtered notes', filteredNotes)
         const notesMap = filteredNotes.map(note => {
             return <Note
                 key={note.id}

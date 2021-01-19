@@ -8,11 +8,13 @@ class NoteLocation extends React.Component {
     render() {
         const { folders, notes } = this.context;
         const targetNote = notes.find(note => {
-            return note.id === this.props.match.params.noteId;
+            return note.id === Number(this.props.match.params.noteId);
         }) || { folderId: Number(this.props.match.params.noteId) }
+        console.log(targetNote)
         const targetFolder = folders.find(folder => {
-            return folder.id === targetNote.folderId
+            return folder.id === targetNote.folder_id
         }) || { name: '' }
+        console.log(targetFolder)
 
         return (
             <div className='SideBar'>
