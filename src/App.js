@@ -18,7 +18,7 @@ class App extends React.Component {
     }
 
     getFolderData() {
-        fetch(`http://localhost:8000/api/folders`)
+        fetch(`https://enigmatic-coast-17530.herokuapp.com/api/folders`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Something went wrong')
@@ -36,7 +36,7 @@ class App extends React.Component {
     }
 
     getNoteData() {
-        fetch(`http://localhost:8000/api/notes`)
+        fetch(`https://enigmatic-coast-17530.herokuapp.com/api/notes`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Something went wrong')
